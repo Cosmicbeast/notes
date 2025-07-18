@@ -21,6 +21,52 @@
 
             <button type="submit" class="feedback-btn">Submit</button>
         </form>
+        <div class="feedback-list-section">
+            <h2>Previous Feedback</h2>
+            <ul id="feedback-list"></ul>
+        </div>
     </div>
+    <script>
+        // Helper to get feedback array from localStorage
+        function getFeedbacks() {
+            const data = localStorage.getItem('feedbacks');
+            return data ? JSON.parse(data) : [];
+        }
+        // Helper to save feedback array to localStorage
+        function saveFeedbacks(feedbacks) {
+            localStorage.setItem('feedbacks', JSON.stringify(feedbacks));
+        }
+        // Render feedbacks in the list
+        function renderFeedbacks() {
+            const feedbacks = getFeedbacks();
+            const list = document.getElementById('feedback-list');
+            list.innerHTML = '';
+            if (feedbacks.length === 0) {
+                list.innerHTML = '<li>No feedback yet.</li>';
+                return;
+            }
+            feedbacks.forEach(fb => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${fb.name}</strong> (${fb.email}): <br>${fb.feedback}`;
+                list.appendChild(li);
+            });
+        }
+        // Handle form submit
+        const form = document.querySelector('.feedback-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const feedback = document.getElementById('feedback').value.trim();
+            if (!name || !email || !feedback) return;
+            const feedbacks = getFeedbacks();
+            feedbacks.push({ name, email, feedback });
+            saveFeedbacks(feedbacks);
+            renderFeedbacks();
+            form.reset();
+        });
+        // Initial render
+        renderFeedbacks();
+    </script>
 </body>
 </html>
