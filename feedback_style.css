@@ -1,6 +1,9 @@
 body {
-    background-color: #c1c0c0fa;
+    margin: 0%;
+    padding: 0%;
+    background-color: #b1b1b1;
     font-family: 'Arial', sans-serif;
+    width: 100%;
 }
 
 header {
@@ -9,46 +12,89 @@ header {
     padding: 10px;
     position: static;
     text-align: center;
+    width: 100%;
 }
-nav {
-    ul{
+nav ul{
         display: flex;
-        justify-content: space-evenly;
-        padding: 0;
-    list-style: none;
-    margin: 0;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: left;
-    }
-    a{
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+        list-style-type: none;
+        margin: 10px;
+        background-color: hsl(0, 0%, 40%);
+        color: white;
+        text-align: left;
+}
+nav ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: hsl(0, 0%, 30%);
+        flex-grow: 1;
+}
+nav a{
         color: white;
         text-decoration: none;
         padding: 10px;
+        border-width: 10px;
+        
     }
+
+main {  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
 }
 .container {
-    width: 50%;
-    background-color: rgb(187, 50, 255);
-    border: 1px solid #ffffff;
-    border-radius: 20px;
-    padding: 15px;
-    margin: 5px 100px;
-    text-align:justify;
-    font-family:'arial', sans-serif;
+        background-color: rgb(187, 50, 255);
+        border: 1px solid #ffffff;
+        margin: 10px 10px;
+        padding: 15px;
+        border-radius: 20px;
+        max-width: 47%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        text-align: justify;
+    }
+
+.feedback-details {
+    background-color: hsla(289, 100%, 60%, 0.638);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+
 }
-#teacher1 {
-    opacity: 100%;
+
+
+.form {
+    display: block;
+    position: static;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: #207bc6;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    /*animation */
 }
-#teacher2 {
-    opacity: 100%;
-}
-#teacher3 {
-    opacity: 100%;
-}
-#teacher4 {
-    opacity: 100%;
+
+.form a {
+    color: white;
+    text-decoration: none;
 }
 
 footer {
@@ -56,13 +102,12 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: static;
+    position: relative;
     width: 100%;
-    bottom: 0;
+    bottom: 0px;
+    min-height: 90px;
+    font-size: 27px;
 }
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
+a:hover {
+    background-color: hsl(261, 90%, 37%);
+    }
