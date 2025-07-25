@@ -16,6 +16,7 @@ body {
   height: 100vh;
   object-fit: cover;
   pointer-events: none;
+  -webkit-user-select: none;
   user-select: none;
   display: block;
 }
@@ -44,17 +45,17 @@ body {
 }
 .tag{
     background: #007bff;
-     color: #fff;
-     padding: 4px 12px;
-     border-radius: 20px;
-     font-size: 12px;
-     font-weight: 500;
-     display: inline-block;
-     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-     border: none;
-     cursor: default;
-     text-transform: capitalize;
-     white-space: nowrap;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: none;
+    cursor: default;
+    text-transform: capitalize;
+    white-space: nowrap;
 }
 .card-inner {
   position: relative;
