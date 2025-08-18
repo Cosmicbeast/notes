@@ -69,7 +69,9 @@ main {
     justify-content: center;
     align-content: center;
     min-height: 70vh;
-    background-image: url('images/feedback_background.jpg');
+}
+.background {
+    background-image: url('images/feedback_background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
