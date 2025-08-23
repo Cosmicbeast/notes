@@ -8,12 +8,29 @@ body {
 }
 
 header {
+    background-size: cover;
+    background-image: url('images/feedback_header_background.jpg');
     background-color: #4a4a4a;
     color: white;
     padding: 10px;
     position: static;
     text-align: center;
     width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+nav {
+    background-color: #4a4a4a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: static;
+    width: 100%;
+    min-height: 50px;
 }
 nav ul{
         display: flex;
@@ -53,6 +70,12 @@ main {
     align-content: center;
     min-height: 70vh;
 }
+.background {
+    background-image: url('images/feedback_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .container {
         background-color: rgb(187, 50, 255);
         border: 1px solid #ffffff;
@@ -77,12 +100,19 @@ main {
     margin: 10px 0;
 
 }
+<<<<<<< HEAD
+=======
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+>>>>>>> 38f42972ce588ece7d787d2bf89af5b085e10175
 
 .form {
-    display: block;
-    position: static;
-    align-items: center;
-    text-align: center;
+    
     margin: 10px 0px;
     padding: 10px;
     background-color: #207bc6;
@@ -90,10 +120,8 @@ main {
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
     min-height: 30px;
-    align-items: center;
-    /*animation */
 }
 
 .form {
